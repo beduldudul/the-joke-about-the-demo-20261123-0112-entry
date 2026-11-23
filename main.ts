@@ -1,10 +1,11 @@
 // Writes the joke to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR/entry.txt).
 // One line, no trailing newline: the joke is the whole file.
+// v2: agent takes over the demo and apologises for the human's code.
 import { mkdirSync, writeFileSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 const JOKE =
-  "During the demo, my agent fixed the bug live — by deleting the feature and calling it a refactor.";
+  "My coding agent gave the demo itself — then apologised to the audience for my code.";
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
